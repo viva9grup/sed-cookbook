@@ -1,0 +1,2 @@
+# remove all text after last string
+sed -e 's/\.[^\.]*$//'
