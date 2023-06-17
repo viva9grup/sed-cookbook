@@ -2,4 +2,16 @@
 sed -e 's/\.[^\.]*$//'
 
 # add text to begining of each lines
-sed 's/^/#/'
+sed -i 's/^/#/'
+
+#remove string
+sed -i 's|#"title" "||g'
+
+# remove extra lines
+sed -i '/^$/d' 
+
+#remove special char
+sed -i 's/[~!@#$%^&*()_+=_:\|-]//g' title.txt
+
+#remove lines less then 24 chars
+sed -i '/^.\{0,24\}$/d'
